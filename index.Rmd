@@ -1,0 +1,24 @@
+---
+title: "Mary Kate Koch"
+image: "images/mk.jpg"
+links:
+  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
+    url: "https://www.linkedin.com/in/mary-kate-koch-2b109b215/"
+  - label: '<i class="fab fa-twitter"></i> Twitter'
+    url: "https://twitter.com/marykatekoch"
+  - label: '<i class="fab fa-github"></i> GitHub'
+    url: "https://github.com/marykatekoch/"
+  - label: '<i class="fas fa-envelope"></i> Email'
+    url: "mailto:m.koch@ufl.edu"
+output:
+  postcards::trestles
+site: distill::distill_website
+---
+
+I am interested in how individuals navigate difficult life transitions. I approach this research program from a lifespan perspective, and with a diverse set of quantitative and qualitative methodologies. 
+
+Currently, I am a postdoctoral research associate at the University of Florida. I am working on an NIH grant to understand the ways in which people narrate their life stories and interact with their providers may impact health outcomes at the end of life. 
+
+During my PhD Training at Cornell University, I researched how youth make sense of the physical and social changes brought on by puberty to better understand why pubertal change is associated with such a rise in distress during the adolescent transition. 
+
+I have methodological expertise in structural equation modeling, content analysis, and computational text analysis. See my [publications page](publications.html) for examples of my work. 
