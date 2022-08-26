@@ -6,7 +6,7 @@ title: "Teaching"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Here are some of the classes I have taught as the instructor of record, as some information about some guest lectures and invited workshops I have done. 
+These are some of the classes I have taught as the instructor of record, as some information about some guest lectures and invited workshops I have done. 
 Feel free to contact me if you would like information about any of them.
 
 ## Undergraduate Courses

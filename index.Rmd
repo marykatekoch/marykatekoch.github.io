@@ -1,5 +1,5 @@
 ---
-title: "Mary Kate Koch, <br>PhD"
+title: "Mary Kate Koch <br>PhD"
 image: "images/orangescropped2.jpg"
 links:
   - label: '<i class="fas fa-envelope"></i> Email'
@@ -15,6 +15,7 @@ output:
   postcards::trestles
 site: distill::distill_website
 ---
+
 
 ```{css echo=FALSE}
 h1 {
@@ -32,15 +33,19 @@ h4 {
   font-size: 18px;
   margin-top: 0px;
 }
+
+}
 #icons {
   color: #cc0033;
   font-size: 30px;
   margin-top: 0px;
 }
+
 .btn {
   border: 1px solid #e7e7e7;
   border-radius: 10px;
 }
+
 .p-3 {
   vertical-align: middle;
   padding: 1.5rem!important;
@@ -50,6 +55,7 @@ h4 {
   // border: 1px solid black;
   border-radius: 50%!important;
 }
+
 ```
 
 ```{r, printing-fuctions, echo=F}
@@ -57,6 +63,7 @@ wrap_li <- function(text = "text", fa = "fas fa-graduation-cap") {
   li <- paste0("<li><i class='fa-li ", fa, "'></i>", text, "</li>\n")
   return(li)
 }
+
 print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
   open_ul  <- "<ul class='ul-edu fa-ul'>"
   close_ul <- "</ul>"
@@ -96,8 +103,7 @@ elements <- c(
  "Adolescent Development",
  "Narrative Identity",
  "Psychology of Puberty",
- "Computational Text Analysis",
- "Structural Equation Modeling"
+ "Computational Text Analysis"
 )
 glue::glue("{ul}{elements}")
 ```

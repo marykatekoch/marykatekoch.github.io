@@ -88,26 +88,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Mary Kate Koch: news</title>
+  <title>Mary Kate Koch: Research</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Mary Kate Koch: news"/>
+  <meta property="og:title" content="Mary Kate Koch: Research"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Mary Kate Koch"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Mary Kate Koch: news"/>
+  <meta property="twitter:title" content="Mary Kate Koch: Research"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["news"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Research"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["css/theme.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2141,9 +2141,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
   </style>
-  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Rubik');
-  @import url('https://fonts.googleapis.com/css2?family=Space+Mono');
+  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+  :root {
+    --font-body:   "Roboto",-apple-system,BlinkMacSystemFont,roboto,segoe ui,Helvetica,Arial,sans-serif;
+    --font-header: "Fira Sans Condensed",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-mono:   SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+
+    --color-background:   #ffffff;
+    --color-primary:      #131660;
+    --color-primary-dark: #0b0d3b;
+    --color-secondary:    #b1def4;
+    --color-tertiary:     #a08a74;
+    --color-text:         #172a3a;
+    --color-white:        #e3e3e3;
+  }
+
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
 
   html {
     /*-- Main font sizes --*/
@@ -2153,16 +2177,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
-    --title-color:     #000000;
+    --title-color:     var(--color-text);
     --header-color:    rgba(0, 0, 0, 0.8);
     --body-color:      rgba(0, 0, 0, 0.8);
     --aside-color:     rgba(0, 0, 0, 0.6);
     --fig-cap-color:   rgba(0, 0, 0, 0.6);
     /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    'Roboto', sans-serif;
-    --mono-font:       'Space Mono', monospace;
-    --body-font:       'Roboto', sans-serif;
-    --navbar-font:     'Roboto', sans-serif;  /* websites + blogs only */
+    --heading-font:    var(--font-header);
+    --mono-font:       var(--font-mono);
+    --body-font:       var(--font-body);
+    --navbar-font:     var(--font-header);
   }
 
   /*-- ARTICLE METADATA --*/
@@ -2192,27 +2216,168 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   .distill-site-header {
     --title-size:       18px;
-    --text-color:       #e3e3e3;
-    --text-size:        15px;
-    --hover-color:      #b1def4;
-    --bkgd-color:       #131660;
+    --text-color:       var(--color-white);
+    --text-size:        18px;
+    --hover-color:      var(--color-secondary);
+    --bkgd-color:       var(--color-primary);
+    font-weight:        500;
   }
 
   .distill-site-footer {
-    --text-color:       #e3e3e3;
+    --text-color:       #var(--color-primary);
     --text-size:        15px;
-    --hover-color:      #b1def4;
-    --bkgd-color:       #131660;
+    --hover-color:      var(--color-primary);
+    --bkgd-color:       var(--color-background);
   }
 
-  /*-- Additional custom styles #5a5a3b--*/ 
-  /* Add any additional CSS rules below                      */
-  d-code {
-    background: #131660;
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below */
+
+  html body {
+      background-color: var(--color-background);
   }
 
-  .nav-dropdown .nav-dropbtn:hover {
-    color:  #b1def4;
+  /* Links */
+
+  a {
+      color: var(--color-primary-dark);
+      border-bottom: 0px;
+      text-decoration: none;
+  }
+
+  d-article a {
+      color: var(--color-primary-dark);
+      border-bottom: 0px;
+      text-decoration: none;
+  }
+
+  a:hover, a:focus {
+      color: var(--color-secondary);
+      font-weight: 500;
+      border-color: var(--color-secondary);
+  }
+
+  d-article a:hover, a:focus {
+      color: var(--color-secondary);
+      font-weight: 500;
+      border-color: var(--color-secondary);
+  }
+
+  /* Buttons on home page */
+
+  .btn-outline-dark {
+      background-color: var(--color-background);
+      color: var(--color-primary);
+      border: 0px;
+  }
+
+  .btn-outline-dark:hover {
+      background-color: var(--color-secondary);
+  }
+
+  /* Menu */
+
+  .nav-dropdown-content a {
+      color: var(--color-primary);
+  }
+
+  .nav-dropdown-content a:hover {
+      background-color: var(--color-background);
+  }
+
+  /* Link buttons */
+
+  .icon-link {
+      background-color: var(--color-background);
+      color: var(--color-primary);
+      padding: 3px 5px 3px 5px;
+      margin: 0 2px 0 2px;
+      border-radius: 5px; /* Rounded edges */
+  }
+
+  .icon-link:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
+  }
+
+  .icon-link-details {
+      background-color: var(--color-primary);
+      color: var(--color-primary);
+      padding: 3px 5px 3px 5px;
+      margin: 0 2px 0 2px;
+      border-radius: 5px; /* Rounded edges */
+  }
+
+  .icon-link-details:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
+  }
+
+  /* For floating images - see lab page, for example */
+
+  .float-left img {
+      float:left;
+      padding: 5px 10px 5px 0px;
+  }
+
+  .float-right img {
+      float:right;
+      padding: 5px 0px 5px 10px;
+  }
+
+  /* Footer */
+
+  .distill-site-footer p {
+      margin-bottom: 0em;
+  }
+
+  /* Pubs page */
+
+  .pub {
+      margin: 0 0 0 0;
+  }
+
+  /* For dropping a shadow behind images */
+  .shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+
+  d-article img {
+    margin-bottom: 10px;
+  }
+
+  /* Smaller spacing in bullet lists */
+
+  d-article li {
+    margin-bottom: 0;
+  }
+
+  /* Code chunks */
+
+  /* Chunk output */
+
+  d-article pre { 
+    overflow: auto !important;
+    border-radius: 5px; /* Rounded edges */
+    font-size: 12px;
+    color: #fff;
+    background-color: #696969;
+    padding: 5px 5px 5px 18px;
+  }
+
+  /* Chunk code */
+
+  d-article div.sourceCode pre { 
+    overflow: auto !important;
+    border-radius: 5px; /* Rounded edges */
+    background-color: #fff;
+    color: black;
+    padding: 5px 5px 5px 18px;
+  }
+
+  d-article div.sourceCode {
+    background-color: transparent;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2381,6 +2546,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="css/theme.css" type="text/css"/>
 
 </head>
 
@@ -2389,7 +2555,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"news","authors":[]}
+{"title":"Research","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2401,7 +2567,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
+<a href="research.html">Research</a>
 <a href="teaching.html">Teaching</a>
 <a href="kochcv.pdf">CV</a>
 <a href="https://twitter.com/marykatekoch">
@@ -2419,7 +2585,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>news</h1>
+<h1>Research</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2427,6 +2593,148 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#overview" id="toc-overview">Overview</a></li>
+<li><a href="#peer-reviewed-publications"
+id="toc-peer-reviewed-publications">Peer-Reviewed Publications</a></li>
+<li><a href="#conference-presentations"
+id="toc-conference-presentations">Conference Presentations</a></li>
+</ul>
+</nav>
+</div>
+<!-- Remove margin under list items -->
+<style>
+d-article ol {
+    margin-bottom: 5px;
+}
+</style>
+<h2 id="overview">Overview</h2>
+<p>I research how major developmental transitions like puberty affect
+health outcomes and identity development. A principle aim of my research
+is to better understand why some individuals navigate transitions that
+everyone goes through in the lifespan more adaptively than others. I use
+a variety of methods in my research, including surveys, interviewing,
+diaries, computational text analysis, content coding, and structural
+equation modeling. Feel free to <a
+href="mailto:m.koch@ufl.edu"><strong>email me</strong></a> if there is
+any project listed here that you would like to know more about.</p>
+<h2 id="peer-reviewed-publications">Peer-Reviewed Publications</h2>
+<p><strong>In press</strong></p>
+<ul>
+<li><p><strong>Koch, M. K.</strong>, &amp; Wang, Q. (in press)
+Autobiographical memory. In Levesque (Ed.), <em>Encyclopedia of
+Adolescence</em>. Springer.</p></li>
+<li><p>Garavito, D. M. N., &amp; <strong>Koch, M. K.</strong> (in
+press). Coming of age in the eyes of the law: The conflict between
+Miranda, J.D.B., and puberty. <em>American Criminal Law
+Review</em>.</p></li>
+</ul>
+<p><strong>Recent Publications</strong></p>
+<ul>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2022). In their
+own words: Finding meaning in girls’ experiences of puberty. <em>Child
+Development</em>. <a href="https://doi.org/10.1111/cdev.13836"
+class="uri">https://doi.org/10.1111/cdev.13836</a></p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2021). Real world
+skills in a virtual world: An innovative activity for teaching
+developmental psychopathology. <em>Teaching of Psychology</em>. <a
+href="https://doi.org/10.1177/00986283211042309"
+class="uri">https://doi.org/10.1177/00986283211042309</a></p></li>
+<li><p><strong>Koch, M. K.</strong>, Mendle, J., &amp; Beam, C. R.
+(2020) Psychological distress amid change: Role disruption in girls
+during the adolescent transition. <em>Research on Child and Adolescent
+Psychopathology</em>, 48, 1211-1222. <a
+href="https://doi.org/10.1007/s10802-020-00667-y"
+class="uri">https://doi.org/10.1007/s10802-020-00667-y</a></p></li>
+<li><p>Mendle, J., Beam, C. R., McKone, K. M. P., &amp; <strong>Koch, M.
+K.</strong> (2020). Puberty and transdiagnostic risks for mental health.
+Journal of Research on Adolescence, 30, 687 705. <a
+href="https://doi.org/10.1111/jora.12552"
+class="uri">https://doi.org/10.1111/jora.12552</a></p></li>
+<li><p>Mendle, J., &amp; <strong>Koch, M. K.</strong> (2019). The
+psychology of puberty: What aren’t we studying that we should? <em>Child
+Development Perspectives</em>, 13, 166-172. <a
+href="https://doi.org/10.1111/cdep.12333"
+class="uri">https://doi.org/10.1111/cdep.12333</a></p></li>
+<li><p>McGuire, T. G., McCormick, K. C., <strong>Koch, M. K.</strong>,
+&amp; Mendle, J. (2019). Pubertal maturation and longitudinal
+trajectories of depression during early adolescence. <em>Frontiers in
+Psychology</em>. <a href="https://doi.org/10.3389/fpsyg.2019.01362"
+class="uri">https://doi.org/10.3389/fpsyg.2019.01362</a></p></li>
+</ul>
+<h2 id="conference-presentations">Conference Presentations</h2>
+<ul>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2022. March).
+Anger or an Accident? Differences in Explanations of Adolescents’
+Behavior in Ambiguous Legal Scenarios by Sex x Race x Maturation. Poster
+presented at the 2022 Biennial Meeting of the Society for Research on
+Adolescence. New Orleans, LA.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2021. April).
+Text analysis of puberty experiences from retrospective and concurrent
+perspectives. Paper presented at the 2021 Biennial Meeting of the
+Society for Research in Child Development, Virtual.</p></li>
+<li><p>Porcelli, S., <strong>Koch, M. K.</strong>, &amp; Mendle, J.
+(2021. April). Untangling rumination and negative urgency: An
+exploration of emotional cascade theory in adolescents. Poster presented
+at the 2021 Biennial Meeting of the Society for Research in Child
+Development, Virtual.</p></li>
+<li><p>Kubi, G., <strong>Koch, M. K.</strong>, Ratner, K., &amp; Mendle,
+J. (2021, March). Perfect fit, or perfectly fixed?: Identity’s role in
+anxiety and perfectionism. Poster presented at the Society for Research
+on Adolescence. Virtual.</p></li>
+<li><p>Porcelli, S., <strong>Koch, M. K.</strong>, &amp; Mendle, J.
+(2019, May). Negative urgency and interpersonal conflict: The mediating
+role of depressive symptoms. Poster presented at the 31st APS Annual
+Convention. Washington, DC.</p></li>
+<li><p><strong>Koch, M. K.</strong>, Kubi, G., &amp; Mendle, J. (2019,
+March). Text analysis approaches to predicting depression in early
+adolescent girls. Poster presented at the Society for Research on Child
+Development. Baltimore, MD.</p></li>
+<li><p>Rosenthal, E., <strong>Koch, M. K.</strong>, &amp; Mendle, J.
+(2019, March). Is age just a number? Exploring the association among
+relative age, pubertal timing, and depression. Poster presented at the
+Society for Research on Child Development. Baltimore, MD.</p></li>
+<li><p><strong>Koch, M. K.</strong>, Royer, C., &amp; Mendle, J. (2019,
+March). Same time, same crime? Pubertal maturation and juvenile
+sentencing. Paper presented at the American Psychology and Law Society
+Annual Meeting Portland, OR.</p></li>
+<li><p><strong>Koch, M. K.</strong>, McKone, K. M. P., &amp; Mendle, J.
+(2018, April). The pubertal transition and perceived role disruption.
+Poster presented at the Society for Research on Adolescence.
+Minneapolis, MN.</p></li>
+<li><p>Rosenthal, E., <strong>Koch, M. K.</strong>, Ratner, K., &amp;
+Mendle, J. (2018, January). ADHD and identity: Situational influences
+and individual variability. Poster presented at the Society for Social
+Psychology and Personality. Atlanta, GA.</p></li>
+<li><p>Wagner, D., Barry, S., <strong>Koch, M. K.</strong>, Dukhovny,
+D., Koskela, N., Hood, K., &amp; Harris, M. (2017, June). Show them the
+money! Neglecting the economic value of behavioral health for youth with
+T1D. Poster presented at the American Diabetes Association Scientific
+Sessions. San Diego, CA.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Koch, C. (2015, November).
+Examining the relationship between multi-tasking and working memory.
+Poster presented at the Psychonomic Society Meeting. Chicago,
+IL.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Medina, A. (2015, April).
+Neuroticism, dysphoria, and autobiographical writing style. Poster
+presented at the Western Psychology Conference for Undergraduate
+Research. Moraga, CA.</p></li>
+<li><p>Jasper, L., Koch, C. &amp; Koch, M. K. (2013, August). Impact of
+substance abuse on everyday memory and attention. Poster presented at
+the Annual Convention of the American Psychological Association.
+Honolulu, HI.</p></li>
+<li><p>Koch, C. &amp; <strong>Koch, M. K.</strong> (2012, November).
+Shyness, positive and negative affect, life satisfaction and video
+games. Poster presented at the Society for Computers in Psychology.
+Minneapolis, MN.</p></li>
+<li><p>Jasper, L., Koch, C., &amp; <strong>Koch, M. K.</strong> (2011,
+November). The impact of substance abuse on everyday memory and
+attention. Poster presented at the Object Perception, Attention, &amp;
+Memory Annual Conference. Seattle, WA.</p></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
@@ -2443,7 +2751,15 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<p>© 2022 Mary Kate Koch <br/>Made with <a
+href="https://cran.r-project.org/"><svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:14px;width:15.89px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#131660;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg></a>
+<a href="https://github.com/rstudio/distill">distill</a> package
+<br/><span style="font-size:0.8rem;">Last updated on August 26,
+2022</span></p>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
+
 
 </body>
 

@@ -7,8 +7,8 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Publications"
-      href: publications.html
+    - text: "Research"
+      href: research.html
     - text: "Teaching"
       href: teaching.html
     - text: "CV"
@@ -18,4 +18,4 @@ navbar:
     - icon: fa-github
       href: https://github.com/marykatekoch/
 output: distill::distill_article
-theme: styles.css
+theme: theme.css
