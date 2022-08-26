@@ -65,7 +65,7 @@ print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
 }
 ```
 
-### Postodoctoral Research Fellow
+### Postdoctoral Research Fellow
 
 #### University of Florida
 
