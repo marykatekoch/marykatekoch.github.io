@@ -77,7 +77,7 @@ I use a variety of methods in my research, including surveys, interviewing, diar
 In my current position, I am working with Drs. Susan Bluck and Carma Bylund on an NIH-funded grant to analyze narrative mechanisms that may help individuals navigate the end of life.
 I hope to translate the methods I have acquired in my postdoc to research that improves parent-child communication in conversations about puberty and, subsequently, mental health outcomes for youth. 
 
-During my PhD, much of my work focused on understanding how girls make meaning out of change during puberty and which aspects of puberty are most distressing through a blend of content coding, topic modeling, and structural equation modeling. 
+During my PhD research with Dr. Jane Mendle, much of my work focused on understanding how girls make meaning out of change during puberty and which aspects of puberty are most distressing through a blend of content coding, topic modeling, and structural equation modeling. 
 </p>
 
 
@@ -112,7 +112,7 @@ glue::glue("{ul}{elements}")
 print_list(
   text = c(
   "PhD in Developmental Psychology, 2022 <br>Cornell University", 
-  "MA in Developmental Psychology, 2022 <br>Cornell University", 
+  "MA in Developmental Psychology, 2018 <br>Cornell University", 
   "BA in Psychology & History, 2015 <br>Gonzaga University"))
 ```
 
