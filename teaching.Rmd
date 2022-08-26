@@ -1,0 +1,30 @@
+---
+title: "Teaching"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Here are some of the classes I have taught as the instructor of record, as some information about some guest lectures and invited workshops I have done. 
+Feel free to contact me if you would like information about any of them.
+
+## Undergraduate Courses
+
+- Adolescence and Emerging Adulthood (Lecture) at Cornell University
+- Unequal Childhoods (Freshmen writing seminar) at Cornell University
+- Narratives of Women's Live (Combined lecture/seminar) at Cornell University
+
+## Guest Lectures
+- Lecture on depression in Developmental Psychopathology at Cornell University
+- Lecture on the psychology of puberty in Adolescence and Emerging Adulthood at Cornell University
+- Lecture on end-of-life decision-making in Aging and Adulthood at Cornell University
+
+## Workshops
+
+- Text mining tools for narrative analysis and other mixed-method research (SSEA 2021)
+- Topic modeling for psychologists
+- Interactional analyses: Empathic Communication
+- Content coding: Communion
+
+<br><br><br>

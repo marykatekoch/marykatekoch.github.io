@@ -9,12 +9,13 @@ navbar:
       href: index.html
     - text: "Publications"
       href: publications.html
+    - text: "Teaching"
+      href: teaching.html
+    - text: "CV"
+      href: "kochcv.pdf"
     - icon: fa-twitter
       href: https://twitter.com/marykatekoch
     - icon: fa-github
       href: https://github.com/marykatekoch/
 output: distill::distill_article
 theme: styles.css
-
-#https://rstudio4edu.github.io/rstudio4edu-book/make-distill.html
-#https://www.faculty.agecon.vt.edu/resources/distillRtips.pdf

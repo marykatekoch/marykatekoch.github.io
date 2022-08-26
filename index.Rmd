@@ -1,24 +1,121 @@
 ---
-title: "Mary Kate Koch"
-image: "images/mk.jpg"
+title: "Mary Kate Koch, <br>PhD"
+image: "images/orangescropped2.jpg"
 links:
-  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
-    url: "https://www.linkedin.com/in/mary-kate-koch-2b109b215/"
+  - label: '<i class="fas fa-envelope"></i> Email'
+    url: "mailto:m.koch@ufl.edu"
   - label: '<i class="fab fa-twitter"></i> Twitter'
     url: "https://twitter.com/marykatekoch"
   - label: '<i class="fab fa-github"></i> GitHub'
     url: "https://github.com/marykatekoch/"
-  - label: '<i class="fas fa-envelope"></i> Email'
-    url: "mailto:m.koch@ufl.edu"
+  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
+    url: "https://www.linkedin.com/in/mary-kate-koch-2b109b215/"
+
 output:
   postcards::trestles
 site: distill::distill_website
 ---
 
-I am interested in how individuals navigate difficult life transitions. I approach this research program from a lifespan perspective, and with a diverse set of quantitative and qualitative methodologies. 
+```{css echo=FALSE}
+h1 {
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+h3 {
+  color: darkgrey;
+  margin-bottom: 8px;
+  margin-top: 0px;
+}
+h4 {
+  color: #e7744c;
+  text-transform: none;
+  font-size: 18px;
+  margin-top: 0px;
+}
+#icons {
+  color: #cc0033;
+  font-size: 30px;
+  margin-top: 0px;
+}
+.btn {
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+}
+.p-3 {
+  vertical-align: middle;
+  padding: 1.5rem!important;
+  box-sizing: border-box;
+}
+.p-3 img {
+  // border: 1px solid black;
+  border-radius: 50%!important;
+}
+```
 
-Currently, I am a postdoctoral research associate at the University of Florida. I am working on an NIH grant to understand the ways in which people narrate their life stories and interact with their providers may impact health outcomes at the end of life. 
+```{r, printing-fuctions, echo=F}
+wrap_li <- function(text = "text", fa = "fas fa-graduation-cap") {
+  li <- paste0("<li><i class='fa-li ", fa, "'></i>", text, "</li>\n")
+  return(li)
+}
+print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
+  open_ul  <- "<ul class='ul-edu fa-ul'>"
+  close_ul <- "</ul>"
+  items    <- wrap_li(text, fa)
+  cat(paste0(open_ul, "\n"), items, paste0("\n", close_ul))
+}
+```
 
-During my PhD Training at Cornell University, I researched how youth make sense of the physical and social changes brought on by puberty to better understand why pubertal change is associated with such a rise in distress during the adolescent transition. 
+### Postodoctoral Research Fellow
 
-I have methodological expertise in structural equation modeling, content analysis, and computational text analysis. See my [publications page](publications.html) for examples of my work. 
+#### University of Florida
+
+<p align="justify">
+My main interests are how major developmental transitions like puberty affect health outcomes and identity development. 
+A principle aim of my research is to better understand why some individuals navigate transitions that everyone goes through in the lifespan more adaptively than others.
+I use a variety of methods in my research, including surveys, interviewing, diaries, computational text analysis, content coding, and structural equation modeling. 
+
+In my current position, I am working with Drs. Susan Bluck and Carma Bylund on an NIH-funded grant to analyze narrative mechanisms that may help individuals navigate the end of life.
+I hope to translate the methods I have acquired in my postdoc to research that improves parent-child communication in conversations about puberty and, subsequently, mental health outcomes for youth. 
+
+During my PhD, much of my work focused on understanding how girls make meaning out of change during puberty and which aspects of puberty are most distressing through a blend of content coding, topic modeling, and structural equation modeling. 
+</p>
+
+
+<br>
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+::: {}
+
+##### Research Interests
+
+```{r, echo=F, results='asis'}
+ul <- "- "
+elements <- c(
+ "Developmental Transitions",
+ "Adolescent Development",
+ "Narrative Identity",
+ "Psychology of Puberty",
+ "Computational Text Analysis",
+ "Structural Equation Modeling"
+)
+glue::glue("{ul}{elements}")
+```
+
+:::
+
+::: {}
+
+##### Education
+
+```{r, print-ed, echo=F, results='asis'}
+print_list(
+  text = c(
+  "PhD in Developmental Psychology, 2022 <br>Cornell University", 
+  "MA in Developmental Psychology, 2022 <br>Cornell University", 
+  "BA in Psychology & History, 2015 <br>Gonzaga University"))
+```
+
+:::
+
+::::

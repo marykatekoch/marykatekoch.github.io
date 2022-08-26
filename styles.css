@@ -16,10 +16,10 @@ html {
   --aside-color:     rgba(0, 0, 0, 0.6);
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
   /*-- Specify custom fonts ~~~ must be imported above   --*/
-  --heading-font:    'Rubik', sans-serif;
+  --heading-font:    'Roboto', sans-serif;
   --mono-font:       'Space Mono', monospace;
-  --body-font:       'Rubik', sans-serif;
-  --navbar-font:     'Rubik', sans-serif;  /* websites + blogs only */
+  --body-font:       'Roboto', sans-serif;
+  --navbar-font:     'Roboto', sans-serif;  /* websites + blogs only */
 }
 
 /*-- ARTICLE METADATA --*/
@@ -51,23 +51,23 @@ d-appendix {
   --title-size:       18px;
   --text-color:       #e3e3e3;
   --text-size:        15px;
-  --hover-color:      #572c70;
-  --bkgd-color:       #614173;
+  --hover-color:      #b1def4;
+  --bkgd-color:       #131660;
 }
 
 .distill-site-footer {
   --text-color:       #e3e3e3;
   --text-size:        15px;
-  --hover-color:      #572c70;
-  --bkgd-color:       #614173;
+  --hover-color:      #b1def4;
+  --bkgd-color:       #131660;
 }
 
-/*-- Additional custom styles --*/
+/*-- Additional custom styles #5a5a3b--*/ 
 /* Add any additional CSS rules below                      */
 d-code {
-  background: #858b97;
+  background: #131660;
 }
 
 .nav-dropdown .nav-dropbtn:hover {
-  color:  #485063;
+  color:  #b1def4;
 }
