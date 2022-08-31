@@ -791,7 +791,7 @@
           }
 
           .distill-site-footer {
-            --text-color:       #var(--color-primary);
+            --text-color:       var(--color-primary);
             --text-size:        15px;
             --hover-color:      var(--color-primary);
             --bkgd-color:       var(--color-background);
@@ -804,9 +804,15 @@
               background-color: var(--color-background);
           }
 
+
+          /* background color for article titles */
+          d-title {
+            background-color: var(--color-primary);
+          }
+
           /* Links */
 
-          a {
+          a { 
               color: var(--color-primary-dark);
               border-bottom: 0px;
               text-decoration: none;
@@ -1110,7 +1116,7 @@
           <header class="header header--fixed" role="banner">
           <nav class="distill-site-nav distill-site-header">
           <div class="nav-left">
-          <a href="index.html" class="title">Mary Kate Koch</a>
+          <a href="index.html" class="title">Mary Kate Koch, PhD</a>
           </div>
           <div class="nav-right">
           <a href="index.html">Home</a>
@@ -1229,9 +1235,9 @@
             <p align="justify">
             <p>My main interests are how major developmental transitions
             like puberty affect health outcomes and identity
-            development. A principle aim of my research is to better
+            development. A central aim of my research is to better
             understand why some individuals navigate transitions that
-            everyone goes through in the lifespan more adaptively than
+            everyone goes through in their lives more adaptively than
             others. I use a variety of methods in my research, including
             surveys, interviewing, diaries, computational text analysis,
             content coding, and structural equation modeling.</p>
@@ -1373,11 +1379,11 @@
               <p align="justify">
               <p>My main interests are how major developmental
               transitions like puberty affect health outcomes and
-              identity development. A principle aim of my research is to
+              identity development. A central aim of my research is to
               better understand why some individuals navigate
-              transitions that everyone goes through in the lifespan
-              more adaptively than others. I use a variety of methods in
-              my research, including surveys, interviewing, diaries,
+              transitions that everyone goes through in their lives more
+              adaptively than others. I use a variety of methods in my
+              research, including surveys, interviewing, diaries,
               computational text analysis, content coding, and
               structural equation modeling.</p>
               <p>In my current position, I am working with Drs. Susan

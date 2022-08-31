@@ -1,0 +1,32 @@
+---
+title: "News"
+format:
+  html:
+      css: theme.css
+---
+
+```{css echo=FALSE}
+d-title h1 {
+  color: var(--color-secondary);
+}
+
+
+/*-- edit if want to change heading sizes
+
+.main {
+  font-size: 12pt;
+}
+h2 {
+  font-size: 18pt;
+}
+
+--*/
+```
+
+# 2022
+
+**<i class="fas fa-comment"></i> UF Postdoc Summer Series**
+
+Gave a talk on puberty
+
+## <i class="fas fa-newspaper"></i> TEXT

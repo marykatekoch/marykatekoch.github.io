@@ -2,12 +2,17 @@
 title: "Teaching"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{css echo=FALSE}
+d-title h1 {
+  color: var(--color-secondary);
+}
 ```
 
-These are some of the classes I have taught as the instructor of record, as some information about some guest lectures and invited workshops I have done. 
+These are some of the classes I have taught as the instructor of record, as well as information about some guest lectures and invited workshops I have done. 
 Feel free to contact me if you would like information about any of them.
+
+I've also published course material in _Teaching in Psychology_ on an interactive class summit activity. I developed the activity for a course on Developmental Psychopathology, but the format can be broadly adapted to other courses. These materials are freely available on [OSF](osf.io/47mkh).
+
 
 ## Undergraduate Courses
 

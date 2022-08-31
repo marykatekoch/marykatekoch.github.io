@@ -88,20 +88,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Mary Kate Koch: Teaching</title>
+  <title>Mary Kate Koch, PhD: Teaching</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Mary Kate Koch: Teaching"/>
+  <meta property="og:title" content="Mary Kate Koch, PhD: Teaching"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Mary Kate Koch"/>
+  <meta property="og:site_name" content="Mary Kate Koch, PhD"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Mary Kate Koch: Teaching"/>
+  <meta property="twitter:title" content="Mary Kate Koch, PhD: Teaching"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
@@ -2224,7 +2224,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   .distill-site-footer {
-    --text-color:       #var(--color-primary);
+    --text-color:       var(--color-primary);
     --text-size:        15px;
     --hover-color:      var(--color-primary);
     --bkgd-color:       var(--color-background);
@@ -2237,9 +2237,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       background-color: var(--color-background);
   }
 
+
+  /* background color for article titles */
+  d-title {
+    background-color: var(--color-primary);
+  }
+
   /* Links */
 
-  a {
+  a { 
       color: var(--color-primary-dark);
       border-bottom: 0px;
       text-decoration: none;
@@ -2562,7 +2568,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Mary Kate Koch</a>
+<a href="index.html" class="title">Mary Kate Koch, PhD</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
@@ -2592,10 +2598,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+d-title h1 {
+  color: var(--color-secondary);
+}
+</style>
+</div>
 <p>These are some of the classes I have taught as the instructor of
-record, as some information about some guest lectures and invited
+record, as well as information about some guest lectures and invited
 workshops I have done. Feel free to contact me if you would like
 information about any of them.</p>
+<p>I’ve also published course material in <em>Teaching in
+Psychology</em> on an interactive class summit activity. I developed the
+activity for a course on Developmental Psychopathology, but the format
+can be broadly adapted to other courses. These materials are freely
+available on <a href="osf.io/47mkh">OSF</a>.</p>
 <h2 id="undergraduate-courses">Undergraduate Courses</h2>
 <ul>
 <li>Adolescence and Emerging Adulthood (Lecture) at Cornell

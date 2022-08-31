@@ -78,7 +78,7 @@ print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
 
 <p align="justify">
 My main interests are how major developmental transitions like puberty affect health outcomes and identity development. 
-A principle aim of my research is to better understand why some individuals navigate transitions that everyone goes through in the lifespan more adaptively than others.
+A central aim of my research is to better understand why some individuals navigate transitions that everyone goes through in their lives more adaptively than others.
 I use a variety of methods in my research, including surveys, interviewing, diaries, computational text analysis, content coding, and structural equation modeling. 
 
 In my current position, I am working with Drs. Susan Bluck and Carma Bylund on an NIH-funded grant to analyze narrative mechanisms that may help individuals navigate the end of life.

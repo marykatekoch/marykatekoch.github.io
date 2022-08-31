@@ -88,26 +88,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Mary Kate Koch: Research</title>
+  <title>Mary Kate Koch, PhD: Research</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Mary Kate Koch: Research"/>
+  <meta property="og:title" content="Mary Kate Koch, PhD: Research"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Mary Kate Koch"/>
+  <meta property="og:site_name" content="Mary Kate Koch, PhD"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Mary Kate Koch: Research"/>
+  <meta property="twitter:title" content="Mary Kate Koch, PhD: Research"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Research"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["css/theme.css"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Research"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["theme.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2224,7 +2224,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   .distill-site-footer {
-    --text-color:       #var(--color-primary);
+    --text-color:       var(--color-primary);
     --text-size:        15px;
     --hover-color:      var(--color-primary);
     --bkgd-color:       var(--color-background);
@@ -2237,9 +2237,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       background-color: var(--color-background);
   }
 
+
+  /* background color for article titles */
+  d-title {
+    background-color: var(--color-primary);
+  }
+
   /* Links */
 
-  a {
+  a { 
       color: var(--color-primary-dark);
       border-bottom: 0px;
       text-decoration: none;
@@ -2546,7 +2552,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="css/theme.css" type="text/css"/>
+  <link rel="stylesheet" href="theme.css" type="text/css"/>
 
 </head>
 
@@ -2563,7 +2569,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Mary Kate Koch</a>
+<a href="index.html" class="title">Mary Kate Koch, PhD</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
@@ -2605,22 +2611,25 @@ id="toc-conference-presentations">Conference Presentations</a></li>
 </ul>
 </nav>
 </div>
-<!-- Remove margin under list items -->
-<style>
-d-article ol {
-    margin-bottom: 5px;
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+d-title h1 {
+  color: var(--color-secondary);
 }
+
 </style>
+</div>
 <h2 id="overview">Overview</h2>
 <p>I research how major developmental transitions like puberty affect
-health outcomes and identity development. A principle aim of my research
+health outcomes and identity development. A central aim of my research
 is to better understand why some individuals navigate transitions that
-everyone goes through in the lifespan more adaptively than others. I use
+everyone goes through in their lives more adaptively than others. I use
 a variety of methods in my research, including surveys, interviewing,
 diaries, computational text analysis, content coding, and structural
-equation modeling. Feel free to <a
-href="mailto:m.koch@ufl.edu"><strong>email me</strong></a> if there is
-any project listed here that you would like to know more about.</p>
+equation modeling.</p>
+<p>Feel free to <a href="mailto:m.koch@ufl.edu"><strong>email
+me</strong></a> if there is any project listed here that you would like
+to know more about.</p>
 <h2 id="peer-reviewed-publications">Peer-Reviewed Publications</h2>
 <p><strong>In press</strong></p>
 <ul>
@@ -2651,7 +2660,7 @@ href="https://doi.org/10.1007/s10802-020-00667-y"
 class="uri">https://doi.org/10.1007/s10802-020-00667-y</a></p></li>
 <li><p>Mendle, J., Beam, C. R., McKone, K. M. P., &amp; <strong>Koch, M.
 K.</strong> (2020). Puberty and transdiagnostic risks for mental health.
-Journal of Research on Adolescence, 30, 687 705. <a
+<em>Journal of Research on Adolescence</em>, 30, 687 705. <a
 href="https://doi.org/10.1111/jora.12552"
 class="uri">https://doi.org/10.1111/jora.12552</a></p></li>
 <li><p>Mendle, J., &amp; <strong>Koch, M. K.</strong> (2019). The
@@ -2664,6 +2673,16 @@ class="uri">https://doi.org/10.1111/cdep.12333</a></p></li>
 trajectories of depression during early adolescence. <em>Frontiers in
 Psychology</em>. <a href="https://doi.org/10.3389/fpsyg.2019.01362"
 class="uri">https://doi.org/10.3389/fpsyg.2019.01362</a></p></li>
+</ul>
+<p><strong>Under Review</strong></p>
+<ul>
+<li><p><strong>Koch, M. K.</strong>, Burd, K. &amp; Mendle, J. Same
+crime, same time? Effects of visual maturity on juvenile justice
+decision-making. <em>(Under Review)</em>.</p></li>
+<li><p>Porcelli, S., Mendle, J., &amp; <strong>Koch, M. K.</strong>
+Mood-based impulsivity and adolescent relationships: Negative urgency
+predicts interpersonal problems in youth. <em>(Under
+Review)</em>.</p></li>
 </ul>
 <h2 id="conference-presentations">Conference Presentations</h2>
 <ul>

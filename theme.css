@@ -81,7 +81,7 @@ d-appendix {
 }
 
 .distill-site-footer {
-  --text-color:       #var(--color-primary);
+  --text-color:       var(--color-primary);
   --text-size:        15px;
   --hover-color:      var(--color-primary);
   --bkgd-color:       var(--color-background);
@@ -94,9 +94,15 @@ html body {
     background-color: var(--color-background);
 }
 
+
+/* background color for article titles */
+d-title {
+  background-color: var(--color-primary);
+}
+
 /* Links */
 
-a {
+a { 
     color: var(--color-primary-dark);
     border-bottom: 0px;
     text-decoration: none;

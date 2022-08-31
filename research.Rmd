@@ -3,19 +3,21 @@ title: "Research"
 output:
   distill::distill_article:
     toc: true
-    css: css/theme.css
+    css: theme.css
 ---
-<!-- Remove margin under list items -->
-<style>
-d-article ol {
-    margin-bottom: 5px;
+
+```{css echo=FALSE}
+d-title h1 {
+  color: var(--color-secondary);
 }
-</style>
+
+```
 
 ## Overview
 I  research how major developmental transitions like puberty affect health outcomes and identity development.
-A principle aim of my research is to better understand why some individuals navigate transitions that everyone goes through in the lifespan more adaptively than others.
-I use a variety of methods in my research, including surveys, interviewing, diaries, computational text analysis, content coding, and structural equation modeling. 
+A central aim of my research is to better understand why some individuals navigate transitions that everyone goes through in their lives more adaptively than others.
+I use a variety of methods in my research, including surveys, interviewing, diaries, computational text analysis, content coding, and structural equation modeling.
+
 Feel free to [__email me__](mailto:m.koch@ufl.edu) if there is any project listed here that you would like to know more about.
 
 
@@ -35,11 +37,17 @@ Feel free to [__email me__](mailto:m.koch@ufl.edu) if there is any project liste
 
 + __Koch, M. K.__, Mendle, J., & Beam, C. R. (2020) Psychological distress amid change: Role	disruption in girls during the adolescent transition. _Research on Child and Adolescent Psychopathology_, 48, 1211-1222. https://doi.org/10.1007/s10802-020-00667-y
 
-+ Mendle, J., Beam, C. R., McKone, K. M. P., & __Koch, M. K.__ (2020). Puberty and transdiagnostic risks for mental health. Journal of Research on Adolescence, 30, 687	705. https://doi.org/10.1111/jora.12552
++ Mendle, J., Beam, C. R., McKone, K. M. P., & __Koch, M. K.__ (2020). Puberty and transdiagnostic risks for mental health. _Journal of Research on Adolescence_, 30, 687	705. https://doi.org/10.1111/jora.12552
 
 + Mendle, J., & __Koch, M. K.__ (2019). The psychology of puberty: What aren’t we studying that	we should? _Child Development Perspectives_, 13, 166-172.	https://doi.org/10.1111/cdep.12333
 
 + McGuire, T. G., McCormick, K. C., __Koch, M. K.__, & Mendle, J. (2019). Pubertal maturation	and longitudinal trajectories of depression during early adolescence. _Frontiers in	Psychology_.  https://doi.org/10.3389/fpsyg.2019.01362
+
+**Under Review**
+
++ __Koch, M. K.__, Burd, K. & Mendle, J. Same crime, same time? Effects of visual maturity on	juvenile justice decision-making. _(Under Review)_.
+
++ Porcelli, S., Mendle, J., & __Koch, M. K.__ Mood-based impulsivity and adolescent relationships:	Negative urgency predicts interpersonal problems in youth. _(Under Review)_.
 
 ## Conference Presentations
 
