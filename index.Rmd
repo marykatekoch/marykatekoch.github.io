@@ -1,6 +1,6 @@
 ---
 title: "Mary Kate Koch <br>PhD"
-image: "images/orangescropped2.jpg"
+image: "images/mkpostdoc.jpg"
 links:
   - label: '<i class="fas fa-envelope"></i> Email'
     url: "mailto:m.koch@ufl.edu"
