@@ -13,8 +13,8 @@ navbar:
       href: teaching.html
     - text: "CV"
       href: "kochcv.pdf"
-#    - text: "News"
-#      href: news.html
+    - text: "News"
+      href: news.html
     - icon: fa-twitter
       href: https://twitter.com/marykatekoch
     - icon: fa-github

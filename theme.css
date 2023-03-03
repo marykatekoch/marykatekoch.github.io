@@ -176,7 +176,7 @@ d-article a:hover, a:focus {
     color: var(--color-primary);
 }
 
-/* For floating images - see lab page, for example */
+/* For floating images */
 
 .float-left img {
     float:left;

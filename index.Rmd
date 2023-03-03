@@ -1,6 +1,6 @@
 ---
 title: "Mary Kate Koch <br>PhD"
-image: "images/orangescropped2.jpg"
+image: "images/headshot.jpg"
 links:
   - label: '<i class="fas fa-envelope"></i> Email'
     url: "mailto:m.koch@ufl.edu"
@@ -15,7 +15,6 @@ output:
   postcards::trestles
 site: distill::distill_website
 ---
-
 
 ```{css echo=FALSE}
 h1 {
@@ -33,27 +32,23 @@ h4 {
   font-size: 18px;
   margin-top: 0px;
 }
-
 }
 #icons {
   color: #cc0033;
   font-size: 30px;
   margin-top: 0px;
 }
-
 .btn {
   border: 1px solid #e7e7e7;
   border-radius: 10px;
 }
-
 .p-3 {
   vertical-align: middle;
   padding: 1.5rem!important;
   box-sizing: border-box;
 }
 .p-3 img {
-  // border: 1px solid black;
-  border-radius: 50%!important;
+  border: 1px solid black;
 }
 
 ```

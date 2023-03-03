@@ -785,6 +785,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1857,15 +1858,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -2540,7 +2547,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2576,6 +2583,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="research.html">Research</a>
 <a href="teaching.html">Teaching</a>
 <a href="kochcv.pdf">CV</a>
+<a href="news.html">News</a>
 <a href="https://twitter.com/marykatekoch">
 <i class="fa fa-twitter" aria-hidden="true"></i>
 </a>
@@ -2604,10 +2612,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3>Contents</h3>
 <ul>
 <li><a href="#overview" id="toc-overview">Overview</a></li>
-<li><a href="#peer-reviewed-publications"
-id="toc-peer-reviewed-publications">Peer-Reviewed Publications</a></li>
-<li><a href="#conference-presentations"
-id="toc-conference-presentations">Conference Presentations</a></li>
+<li><a href="#peer-reviewed-publications" id="toc-peer-reviewed-publications">Peer-Reviewed Publications</a></li>
+<li><a href="#conference-presentations" id="toc-conference-presentations">Conference Presentations</a></li>
 </ul>
 </nav>
 </div>
@@ -2620,150 +2626,51 @@ d-title h1 {
 </style>
 </div>
 <h2 id="overview">Overview</h2>
-<p>I research how major developmental transitions like puberty affect
-health outcomes and identity development. A central aim of my research
-is to better understand why some individuals navigate transitions that
-everyone goes through in their lives more adaptively than others. I use
-a variety of methods in my research, including surveys, interviewing,
-diaries, computational text analysis, content coding, and structural
-equation modeling.</p>
-<p>Feel free to <a href="mailto:m.koch@ufl.edu"><strong>email
-me</strong></a> if there is any project listed here that you would like
-to know more about.</p>
+<p>I research how major developmental transitions like puberty affect health outcomes and identity development.
+A central aim of my research is to better understand why some individuals navigate transitions that everyone goes through in their lives more adaptively than others.
+I use a variety of methods in my research, including surveys, interviewing, diaries, computational text analysis, content coding, and structural equation modeling.</p>
+<p>Feel free to <a href="mailto:m.koch@ufl.edu"><strong>email me</strong></a> if there is any project listed here that you would like to know more about.</p>
 <h2 id="peer-reviewed-publications">Peer-Reviewed Publications</h2>
-<p><strong>In press</strong></p>
+<p><strong>Recent Publications</strong>
++ Garavito, D. M. N., &amp; <strong>Koch, M. K.</strong> (2023). Coming of age in the eyes of the law: The conflict between Miranda, J.D.B., and puberty. <em>American Criminal Law Review</em>. <a href="https://heinonline.org/HOL/LandingPage?handle=hein.journals/amcrimlr60&amp;div=5&amp;id=&amp;page=" class="uri">https://heinonline.org/HOL/LandingPage?handle=hein.journals/amcrimlr60&amp;div=5&amp;id=&amp;page=</a></p>
 <ul>
-<li><p><strong>Koch, M. K.</strong>, &amp; Wang, Q. (in press)
-Autobiographical memory. In Levesque (Ed.), <em>Encyclopedia of
-Adolescence</em>. Springer.</p></li>
-<li><p>Garavito, D. M. N., &amp; <strong>Koch, M. K.</strong> (in
-press). Coming of age in the eyes of the law: The conflict between
-Miranda, J.D.B., and puberty. <em>American Criminal Law
-Review</em>.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Wang, Q. (2022) Autobiographical memory. In Levesque (Ed.), <em>Encyclopedia of Adolescence</em>. Springer. <a href="https://doi.org/10.1007/978-3-319-32132-5_827-1" class="uri">https://doi.org/10.1007/978-3-319-32132-5_827-1</a></p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2022). In their own words: Finding meaning in girls’ experiences of puberty. <em>Child Development</em>. <a href="https://doi.org/10.1111/cdev.13836" class="uri">https://doi.org/10.1111/cdev.13836</a></p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2021). Real world skills in a virtual world: An innovative activity for teaching developmental psychopathology. <em>Teaching of Psychology</em>. <a href="https://doi.org/10.1177/00986283211042309" class="uri">https://doi.org/10.1177/00986283211042309</a></p></li>
+<li><p><strong>Koch, M. K.</strong>, Mendle, J., &amp; Beam, C. R. (2020) Psychological distress amid change: Role disruption in girls during the adolescent transition. <em>Research on Child and Adolescent Psychopathology</em>, 48, 1211-1222. <a href="https://doi.org/10.1007/s10802-020-00667-y" class="uri">https://doi.org/10.1007/s10802-020-00667-y</a></p></li>
+<li><p>Mendle, J., Beam, C. R., McKone, K. M. P., &amp; <strong>Koch, M. K.</strong> (2020). Puberty and transdiagnostic risks for mental health. <em>Journal of Research on Adolescence</em>, 30, 687 705. <a href="https://doi.org/10.1111/jora.12552" class="uri">https://doi.org/10.1111/jora.12552</a></p></li>
+<li><p>Mendle, J., &amp; <strong>Koch, M. K.</strong> (2019). The psychology of puberty: What aren’t we studying that we should? <em>Child Development Perspectives</em>, 13, 166-172. <a href="https://doi.org/10.1111/cdep.12333" class="uri">https://doi.org/10.1111/cdep.12333</a></p></li>
+<li><p>McGuire, T. G., McCormick, K. C., <strong>Koch, M. K.</strong>, &amp; Mendle, J. (2019). Pubertal maturation and longitudinal trajectories of depression during early adolescence. <em>Frontiers in Psychology</em>. <a href="https://doi.org/10.3389/fpsyg.2019.01362" class="uri">https://doi.org/10.3389/fpsyg.2019.01362</a></p></li>
 </ul>
 <p><strong>Under Review</strong></p>
 <ul>
-<li><p><strong>Koch, M. K.</strong>, Burd, K. &amp; Mendle, J. Same
-crime, same time? Effects of visual maturity on juvenile justice
-decision-making. <em>(Under Review)</em>.</p></li>
-<li><p>Porcelli, S., Mendle, J., &amp; <strong>Koch, M. K.</strong>
-Mood-based impulsivity and adolescent relationships: Negative urgency
-predicts interpersonal problems in youth. <em>(Under
-Review)</em>.</p></li>
-</ul>
-<p><strong>Recent Publications</strong></p>
-<ul>
-<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2022). In their
-own words: Finding meaning in girls’ experiences of puberty. <em>Child
-Development</em>. <a href="https://doi.org/10.1111/cdev.13836"
-class="uri">https://doi.org/10.1111/cdev.13836</a></p></li>
-<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2021). Real world
-skills in a virtual world: An innovative activity for teaching
-developmental psychopathology. <em>Teaching of Psychology</em>. <a
-href="https://doi.org/10.1177/00986283211042309"
-class="uri">https://doi.org/10.1177/00986283211042309</a></p></li>
-<li><p><strong>Koch, M. K.</strong>, Mendle, J., &amp; Beam, C. R.
-(2020) Psychological distress amid change: Role disruption in girls
-during the adolescent transition. <em>Research on Child and Adolescent
-Psychopathology</em>, 48, 1211-1222. <a
-href="https://doi.org/10.1007/s10802-020-00667-y"
-class="uri">https://doi.org/10.1007/s10802-020-00667-y</a></p></li>
-<li><p>Mendle, J., Beam, C. R., McKone, K. M. P., &amp; <strong>Koch, M.
-K.</strong> (2020). Puberty and transdiagnostic risks for mental health.
-<em>Journal of Research on Adolescence</em>, 30, 687 705. <a
-href="https://doi.org/10.1111/jora.12552"
-class="uri">https://doi.org/10.1111/jora.12552</a></p></li>
-<li><p>Mendle, J., &amp; <strong>Koch, M. K.</strong> (2019). The
-psychology of puberty: What aren’t we studying that we should? <em>Child
-Development Perspectives</em>, 13, 166-172. <a
-href="https://doi.org/10.1111/cdep.12333"
-class="uri">https://doi.org/10.1111/cdep.12333</a></p></li>
-<li><p>McGuire, T. G., McCormick, K. C., <strong>Koch, M. K.</strong>,
-&amp; Mendle, J. (2019). Pubertal maturation and longitudinal
-trajectories of depression during early adolescence. <em>Frontiers in
-Psychology</em>. <a href="https://doi.org/10.3389/fpsyg.2019.01362"
-class="uri">https://doi.org/10.3389/fpsyg.2019.01362</a></p></li>
+<li><p><strong>Koch, M. K.</strong>, Burd, K. &amp; Mendle, J. Same crime, same time? Effects of visual maturity on juvenile justice decision-making. <em>(Under Review)</em>.</p></li>
+<li><p>Porcelli, S., Mendle, J., &amp; <strong>Koch, M. K.</strong> Mood-based impulsivity and adolescent relationships: Negative urgency predicts interpersonal problems in youth. <em>(Under Review)</em>.</p></li>
 </ul>
 <p><strong>Dissertation</strong></p>
 <ul>
-<li><strong>Koch, M. K.</strong> (2022) <em>In Whose Words? Experiences
-at Puberty Situated in Individual, Social, and Cultural Contexts</em>
-(Publication No. 29161467) [Doctoral dissertation, Cornell University].
-ProQuest Dissertations &amp; Theses Global. <a
-href="./Koch_Dissertation.pdf">Available here</a>.</li>
+<li><strong>Koch, M. K.</strong> (2022) <em>In Whose Words? Experiences at Puberty Situated in Individual, Social, and Cultural Contexts</em> (Publication No. 29161467) [Doctoral dissertation, Cornell University]. ProQuest Dissertations &amp; Theses Global. <a href="./Koch_Dissertation.pdf">Available here</a>.</li>
 </ul>
 <h2 id="conference-presentations">Conference Presentations</h2>
 <ul>
-<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2022. March).
-Anger or an Accident? Differences in Explanations of Adolescents’
-Behavior in Ambiguous Legal Scenarios by Sex x Race x Maturation. Poster
-presented at the 2022 Biennial Meeting of the Society for Research on
-Adolescence. New Orleans, LA.</p></li>
-<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2021. April).
-Text analysis of puberty experiences from retrospective and concurrent
-perspectives. Paper presented at the 2021 Biennial Meeting of the
-Society for Research in Child Development, Virtual.</p></li>
-<li><p>Porcelli, S., <strong>Koch, M. K.</strong>, &amp; Mendle, J.
-(2021. April). Untangling rumination and negative urgency: An
-exploration of emotional cascade theory in adolescents. Poster presented
-at the 2021 Biennial Meeting of the Society for Research in Child
-Development, Virtual.</p></li>
-<li><p>Kubi, G., <strong>Koch, M. K.</strong>, Ratner, K., &amp; Mendle,
-J. (2021, March). Perfect fit, or perfectly fixed?: Identity’s role in
-anxiety and perfectionism. Poster presented at the Society for Research
-on Adolescence. Virtual.</p></li>
-<li><p>Porcelli, S., <strong>Koch, M. K.</strong>, &amp; Mendle, J.
-(2019, May). Negative urgency and interpersonal conflict: The mediating
-role of depressive symptoms. Poster presented at the 31st APS Annual
-Convention. Washington, DC.</p></li>
-<li><p><strong>Koch, M. K.</strong>, Kubi, G., &amp; Mendle, J. (2019,
-March). Text analysis approaches to predicting depression in early
-adolescent girls. Poster presented at the Society for Research on Child
-Development. Baltimore, MD.</p></li>
-<li><p>Rosenthal, E., <strong>Koch, M. K.</strong>, &amp; Mendle, J.
-(2019, March). Is age just a number? Exploring the association among
-relative age, pubertal timing, and depression. Poster presented at the
-Society for Research on Child Development. Baltimore, MD.</p></li>
-<li><p><strong>Koch, M. K.</strong>, Royer, C., &amp; Mendle, J. (2019,
-March). Same time, same crime? Pubertal maturation and juvenile
-sentencing. Paper presented at the American Psychology and Law Society
-Annual Meeting Portland, OR.</p></li>
-<li><p><strong>Koch, M. K.</strong>, McKone, K. M. P., &amp; Mendle, J.
-(2018, April). The pubertal transition and perceived role disruption.
-Poster presented at the Society for Research on Adolescence.
-Minneapolis, MN.</p></li>
-<li><p>Rosenthal, E., <strong>Koch, M. K.</strong>, Ratner, K., &amp;
-Mendle, J. (2018, January). ADHD and identity: Situational influences
-and individual variability. Poster presented at the Society for Social
-Psychology and Personality. Atlanta, GA.</p></li>
-<li><p>Wagner, D., Barry, S., <strong>Koch, M. K.</strong>, Dukhovny,
-D., Koskela, N., Hood, K., &amp; Harris, M. (2017, June). Show them the
-money! Neglecting the economic value of behavioral health for youth with
-T1D. Poster presented at the American Diabetes Association Scientific
-Sessions. San Diego, CA.</p></li>
-<li><p><strong>Koch, M. K.</strong>, &amp; Koch, C. (2015, November).
-Examining the relationship between multi-tasking and working memory.
-Poster presented at the Psychonomic Society Meeting. Chicago,
-IL.</p></li>
-<li><p><strong>Koch, M. K.</strong>, &amp; Medina, A. (2015, April).
-Neuroticism, dysphoria, and autobiographical writing style. Poster
-presented at the Western Psychology Conference for Undergraduate
-Research. Moraga, CA.</p></li>
-<li><p>Jasper, L., Koch, C. &amp; Koch, M. K. (2013, August). Impact of
-substance abuse on everyday memory and attention. Poster presented at
-the Annual Convention of the American Psychological Association.
-Honolulu, HI.</p></li>
-<li><p>Koch, C. &amp; <strong>Koch, M. K.</strong> (2012, November).
-Shyness, positive and negative affect, life satisfaction and video
-games. Poster presented at the Society for Computers in Psychology.
-Minneapolis, MN.</p></li>
-<li><p>Jasper, L., Koch, C., &amp; <strong>Koch, M. K.</strong> (2011,
-November). The impact of substance abuse on everyday memory and
-attention. Poster presented at the Object Perception, Attention, &amp;
-Memory Annual Conference. Seattle, WA.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2022. March). Anger or an Accident? Differences in Explanations of Adolescents’ Behavior in Ambiguous Legal Scenarios by Sex x Race x Maturation. Poster presented at the 2022 Biennial Meeting of the Society for Research on Adolescence. New Orleans, LA.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Mendle, J. (2021. April). Text analysis of puberty experiences from retrospective and concurrent perspectives. Paper presented at the 2021 Biennial Meeting of the Society for Research in Child Development, Virtual.</p></li>
+<li><p>Porcelli, S., <strong>Koch, M. K.</strong>, &amp; Mendle, J. (2021. April). Untangling rumination and negative urgency: An exploration of emotional cascade theory in adolescents. Poster presented at the 2021 Biennial Meeting of the Society for Research in Child Development, Virtual.</p></li>
+<li><p>Kubi, G., <strong>Koch, M. K.</strong>, Ratner, K., &amp; Mendle, J. (2021, March). Perfect fit, or perfectly fixed?: Identity’s role in anxiety and perfectionism. Poster presented at the Society for Research on Adolescence. Virtual.</p></li>
+<li><p>Porcelli, S., <strong>Koch, M. K.</strong>, &amp; Mendle, J. (2019, May). Negative urgency and interpersonal conflict: The mediating role of depressive symptoms. Poster presented at the 31st APS Annual Convention. Washington, DC.</p></li>
+<li><p><strong>Koch, M. K.</strong>, Kubi, G., &amp; Mendle, J. (2019, March). Text analysis approaches to predicting depression in early adolescent girls. Poster presented at the Society for Research on Child Development. Baltimore, MD.</p></li>
+<li><p>Rosenthal, E., <strong>Koch, M. K.</strong>, &amp; Mendle, J. (2019, March). Is age just a number? Exploring the association among relative age, pubertal timing, and depression. Poster presented at the Society for Research on Child Development. Baltimore, MD.</p></li>
+<li><p><strong>Koch, M. K.</strong>, Royer, C., &amp; Mendle, J. (2019, March). Same time, same crime? Pubertal maturation and juvenile sentencing. Paper presented at the American Psychology and Law Society Annual Meeting Portland, OR.</p></li>
+<li><p><strong>Koch, M. K.</strong>, McKone, K. M. P., &amp; Mendle, J. (2018, April). The pubertal transition and perceived role disruption. Poster presented at the Society for Research on Adolescence. Minneapolis, MN.</p></li>
+<li><p>Rosenthal, E., <strong>Koch, M. K.</strong>, Ratner, K., &amp; Mendle, J. (2018, January). ADHD and identity: Situational influences and individual variability. Poster presented at the Society for Social Psychology and Personality. Atlanta, GA.</p></li>
+<li><p>Wagner, D., Barry, S., <strong>Koch, M. K.</strong>, Dukhovny, D., Koskela, N., Hood, K., &amp; Harris, M. (2017, June). Show them the money! Neglecting the economic value of behavioral health for youth with T1D. Poster presented at the American Diabetes Association Scientific Sessions. San Diego, CA.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Koch, C. (2015, November). Examining the relationship between multi-tasking and working memory. Poster presented at the Psychonomic Society Meeting. Chicago, IL.</p></li>
+<li><p><strong>Koch, M. K.</strong>, &amp; Medina, A. (2015, April). Neuroticism, dysphoria, and autobiographical writing style. Poster presented at the Western Psychology Conference for Undergraduate Research. Moraga, CA.</p></li>
+<li><p>Jasper, L., Koch, C. &amp; Koch, M. K. (2013, August). Impact of substance abuse on everyday memory and attention. Poster presented at the Annual Convention of the American Psychological Association. Honolulu, HI.</p></li>
+<li><p>Koch, C. &amp; <strong>Koch, M. K.</strong> (2012, November). Shyness, positive and negative affect, life satisfaction and video games. Poster presented at the Society for Computers in Psychology. Minneapolis, MN.</p></li>
+<li><p>Jasper, L., Koch, C., &amp; <strong>Koch, M. K.</strong> (2011, November). The impact of substance abuse on everyday memory and attention. Poster presented at the Object Perception, Attention, &amp; Memory Annual Conference. Seattle, WA.</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
