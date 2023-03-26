@@ -67,19 +67,15 @@ print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
 }
 ```
 
-### Postdoctoral Research Fellow
-
-#### University of Florida
+### Researcher | Social Scientist
 
 <p align="justify">
-My main interests are how major developmental transitions like puberty affect health outcomes and identity development. 
-A central aim of my research is to better understand why some individuals navigate transitions that everyone goes through in their lives more adaptively than others.
-I use a variety of methods in my research, including surveys, interviewing, diaries, computational text analysis, content coding, and structural equation modeling. 
+I am researcher and social scientist with more than 7 years of experience storytelling with data. I love leveraging my quantitative and qualitative research toolkit to understand data, and clearly communicate  the story that data is telling to broad audiences. I especially love when the data I am working with as real-world impact. To date, my work has encompassed broad range of impact, including understanding individual differences in health outcomes,improving patient care, and patterns in the media kids consume. 
 
-In my current position, I am working with Drs. Susan Bluck and Carma Bylund on an NIH-funded grant to analyze narrative mechanisms that may help individuals navigate the end of life.
-I hope to translate the methods I have acquired in my postdoc to research that improves parent-child communication in conversations about puberty and, subsequently, mental health outcomes for youth. 
+I have expertise in a variety of research skills, including surveys, interviewing, diaries, text mining, content-coding, and structural equation modeling. I use R, Python, SAS, and SPSS to accomplish data analysis and visualization. I am also a skilled communicator, and have translated data into technical articles, public interest blogs, non-profit reports, and national and international talks.
 
-During my PhD research with Dr. Jane Mendle, much of my work focused on understanding how girls make meaning out of change during puberty and which aspects of puberty are most distressing through a blend of content coding, topic modeling, and structural equation modeling. 
+When I'm not at work, I can be found playing in local soccer, basketball, and kickball leagues. I'm also slowly working on developing a green thumb and baking through every Claire Saffitz dessert recipe.
+
 </p>
 
 
@@ -89,16 +85,16 @@ During my PhD research with Dr. Jane Mendle, much of my work focused on understa
 
 ::: {}
 
-##### Research Interests
+##### Research Skills
 
 ```{r, echo=F, results='asis'}
 ul <- "- "
 elements <- c(
- "Developmental Transitions",
- "Adolescent Development",
- "Narrative Identity",
- "Psychology of Puberty",
- "Computational Text Analysis"
+ "Data Analysis",
+ "Natural Language Processing",
+ "Statistical Modeling",
+ "Collaboration",
+ "Data Visualization"
 )
 glue::glue("{ul}{elements}")
 ```
