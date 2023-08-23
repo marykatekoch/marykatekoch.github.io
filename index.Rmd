@@ -8,6 +8,8 @@ links:
     url: "https://twitter.com/marykatekoch"
   - label: '<i class="fab fa-github"></i> GitHub'
     url: "https://github.com/marykatekoch/"
+  - label: '<i class="fa fa-spinner"></i> OSF'
+    url: "https://osf.io/a4rzt/"
   - label: '<i class="fab fa-linkedin"></i> LinkedIn'
     url: "https://www.linkedin.com/in/mary-kate-koch-2b109b215/"
 
@@ -67,14 +69,12 @@ print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
 }
 ```
 
-### Researcher | Social Scientist
-
 <p align="justify">
-I am researcher and social scientist with more than 7 years of experience storytelling with data. I love leveraging my quantitative and qualitative research toolkit to understand data, and clearly communicate  the story that data is telling to broad audiences. I especially love when the data I am working with as real-world impact. To date, my work has encompassed broad range of impact, including understanding individual differences in health outcomes,improving patient care, and patterns in the media kids consume. 
+I study how people cope, communicate, and make meaning during major life changes. In particular, my research has focused on how youth experience puberty and the messages society sends youth about gender and identity during this time. More recently, my research has focused on how social responsibilities affect the ways in which older adults with life-threatening illness prepare loved ones for their potential death. While puberty and dying may seem quite different, both are major life transitions through which everyone must pass. Accordingly, these transitions are useful for highlighting individual differences and societal impacts. In researching these transitions, I am guided by the overarching question of why these transitions seem easier for some individuals than others. 
 
-I have expertise in a variety of research skills, including surveys, interviewing, diaries, text mining, content-coding, and structural equation modeling. I use R, Python, SAS, and SPSS to accomplish data analysis and visualization. I am also a skilled communicator, and have translated data into technical articles, public interest blogs, non-profit reports, and national and international talks.
+I use a person-centered approach to my research that incorporates individuals’ lived experiences and own voices. In addition, I examine what social and cultural environments communicate during transitions using ecologically grounded methods. I use a diverse toolkit, including content-coding, NLP, and structural equation modeling.
 
-When I'm not at work, I can be found playing in local soccer, basketball, and kickball leagues. I'm also slowly working on developing a green thumb and baking through every Claire Saffitz dessert recipe.
+When I am not at work, I can be found playing in local soccer and kickball leagues trying to remind myself that sports are just a game. 
 
 </p>
 
@@ -85,16 +85,16 @@ When I'm not at work, I can be found playing in local soccer, basketball, and ki
 
 ::: {}
 
-##### Research Skills
+##### Research Interests
 
 ```{r, echo=F, results='asis'}
 ul <- "- "
 elements <- c(
- "Data Analysis",
+ "Developmental Change",
+ "Gender Identity",
  "Natural Language Processing",
- "Statistical Modeling",
- "Collaboration",
- "Data Visualization"
+ "Communication Styles",
+ "Life Story Review"
 )
 glue::glue("{ul}{elements}")
 ```
