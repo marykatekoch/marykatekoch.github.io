@@ -1,5 +1,6 @@
 name: "marykatekoch.github.io"
 title: "Mary Kate Koch, PhD"
+favicon: images/waves.png
 description: |
     Mary Kate Koch's personal website
 output_dir: "docs"
@@ -15,9 +16,9 @@ navbar:
       href: "kochcv.pdf"
     - text: "News"
       href: news.html
-    - icon: fa-twitter
-      href: https://twitter.com/marykatekoch
-    - icon: fa-github
-      href: https://github.com/marykatekoch/
+   # - icon: fa-twitter
+    #  href: https://twitter.com/marykatekoch
+  #  - icon: fa-github
+   #   href: https://github.com/marykatekoch/
 output: distill::distill_article
 theme: theme.css

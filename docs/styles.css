@@ -49,25 +49,25 @@ d-appendix {
 
 .distill-site-header {
   --title-size:       18px;
-  --text-color:       #e3e3e3;
+  --text-color:       #c20e5c;
   --text-size:        15px;
-  --hover-color:      #b1def4;
-  --bkgd-color:       #131660;
+  --hover-color:      #75184f;
+  --bkgd-color:       #23132c;
 }
 
 .distill-site-footer {
-  --text-color:       #e3e3e3;
+  --text-color:       #c20e5c;
   --text-size:        15px;
-  --hover-color:      #b1def4;
-  --bkgd-color:       #131660;
+  --hover-color:      #75184f;
+  --bkgd-color:       #23132c;
 }
 
 /*-- Additional custom styles --*/ 
 /* Add any additional CSS rules below                      */
 d-code {
-  background: #131660;
+  background: #23132c;
 }
 
 .nav-dropdown .nav-dropbtn:hover {
-  color:  #b1def4;
+  color:  #75184f;
 }
