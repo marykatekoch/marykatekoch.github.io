@@ -1,9 +1,9 @@
 name: "marykatekoch.github.io"
 title: "Mary Kate Koch, PhD"
-favicon: images/waves.png
 description: |
     Mary Kate Koch's personal website
 output_dir: "docs"
+favicon: images/waves.ico
 navbar:
   right:
     - text: "Home"
