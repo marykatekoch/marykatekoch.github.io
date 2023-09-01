@@ -3,7 +3,6 @@ title: "Mary Kate Koch, PhD"
 description: |
     Mary Kate Koch's personal website
 output_dir: "docs"
-favicon: images/waves.ico
 navbar:
   right:
     - text: "Home"
@@ -13,7 +12,7 @@ navbar:
     - text: "Teaching"
       href: teaching.html
     - text: "CV"
-      href: "kochcv.pdf"
+      href: "koch_cv_web.pdf"
     - text: "News"
       href: news.html
    # - icon: fa-twitter
@@ -21,4 +20,5 @@ navbar:
   #  - icon: fa-github
    #   href: https://github.com/marykatekoch/
 output: distill::distill_article
+favicon: images/waves.ico
 theme: theme.css
