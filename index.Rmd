@@ -88,11 +88,11 @@ I take a social ecological approach, grounding people in their local environment
 ```{r, echo=F, results='asis'}
 ul <- "- "
 elements <- c(
+ "Health and Well-Being",
  "Developmental Change",
- "Gender Identity",
  "Natural Language Processing",
- "Communication Styles",
- "Life Story Review"
+ "Gender Identity",
+ "Societal Biases"
 )
 glue::glue("{ul}{elements}")
 ```
