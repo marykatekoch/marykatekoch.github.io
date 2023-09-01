@@ -70,9 +70,9 @@ print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
 ```
 
 <p align="justify">
-I study how people cope, communicate, and make meaning during major life changes. In particular, my research has focused on how youth experience puberty and the messages society sends youth about gender and identity during this time. More recently, my research has focused on how social responsibilities affect the ways in which older adults with life-threatening illness prepare loved ones for their potential death. While puberty and dying may seem quite different, both are major life transitions through which everyone must pass. Accordingly, these transitions are useful for highlighting individual differences and societal impacts. In researching these transitions, I am guided by the overarching question of why these transitions seem easier for some individuals than others. 
+My research examines how (1) biases in societal-level messaging and (2) individual reactions to challenge affects ability to adapt (i.e., health and well-being) during times of transition. 
 
-I use a person-centered approach to my research that incorporates individuals’ lived experiences and own voices. In addition, I examine what social and cultural environments communicate during transitions using ecologically grounded methods. I use a diverse toolkit, including content-coding, NLP, and structural equation modeling.
+I take a social ecological approach, grounding people in their local environments, to address this critical issue for human flourishing. I use a diverse toolkit of methods including content-coding, natural language processing, structural equation modeling, content analysis, longitudinal studies, and laboratory experiments.
 
 </p>
 
