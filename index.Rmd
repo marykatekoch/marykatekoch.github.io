@@ -3,7 +3,7 @@ title: "Mary Kate Koch <br>PhD"
 image: "images/headshot.jpg"
 links:
   - label: '<i class="fas fa-envelope"></i> Email'
-    url: "mailto:m.koch@ufl.edu"
+    url: "mailto:kochm@gonzaga.edu"
   - label: '<i class="fab fa-twitter"></i> Twitter'
     url: "https://twitter.com/marykatekoch"
   - label: '<i class="fab fa-github"></i> GitHub'
@@ -73,6 +73,8 @@ print_list <- function(text = "text", fa = "fas fa-graduation-cap") {
 My research examines how (1) biases in societal-level messaging and (2) individual reactions to challenge affects ability to adapt (i.e., health and well-being) during times of transition. 
 
 I take a social ecological approach, grounding people in their local environments, to address this critical issue for human flourishing. I use a diverse toolkit of methods including content-coding, natural language processing, structural equation modeling, content analysis, longitudinal studies, and laboratory experiments.
+
+I am currently an assistant professor at Gonzaga University.
 
 </p>
 
